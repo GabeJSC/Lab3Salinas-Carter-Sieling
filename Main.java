@@ -1,27 +1,15 @@
-import java.util.Random;
-import java.util.Scanner;
+import java.sql.SQLOutput;
 
 public class Main {
-
-    public static void welcome () { //message to welcome user and wish them good luck
-        System.out.println("Hello! would you like to play a game of Rock, Paper, Scissors?");
-        System.out.println("1.Yes!");
-        System.out.println("2.No!");
-        Scanner input = new Scanner(System.in);
-        int choice = input.nextInt();
-        if (choice == 1) {
-
-        }
+    public static void welcome(){
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++");
+        System.out.println("Welcome! thank you for choosing our program.");
+        System.out.println("You will be given the choice to play either a guessing game or rock, paper, scissors.");
+        System.out.println("Please choose which ever one you would like and play for as long as you want.");
+        System.out.println("Good luck and have fun!");
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++");
     }
-
-    public
-
-    public static void main (String[] args) {
-
-        Random random = new Random();
-        int seed = random.nextInt();
-        random.setSeed(seed);
-        for (int i=0; i < 3; i++)
-            System.out.print(random.nextInt() + " ");
+    public static void main(String[] args) {
+        welcome();
     }
 }
