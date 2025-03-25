@@ -1,9 +1,9 @@
-import java.util.Random;
 import java.util.Scanner;
 import java.lang.Math;
-public class Main {
+public class guess {
+    public static void numberGuess(String[] args) {
 
-    public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
         int guessCount = 0;
         int numG = 0;
@@ -12,7 +12,7 @@ public class Main {
         String option =  "Y" ;
 
 
-     magicNum = (int) (Math.random()*100);
+        magicNum = (int) (Math.random()*100);
         do {
 
             if (guessCount == 0 && hazardWarn == 0) {
@@ -26,7 +26,7 @@ public class Main {
             else {
                 input.next();
                 System.out.println("Invalid Guess try again");
-                    hazardWarn = 1;
+                hazardWarn = 1;
                 guessCount = guessCount -1;
             }
 
@@ -40,18 +40,18 @@ public class Main {
                 System.out.println("Nope too high Try again (" + (5 - guessCount) + " tries left)");
             }
             if (numG == magicNum){
-        System.out.println("Congrats you Guessed correctly");
+                System.out.println("Congrats you Guessed correctly");
                 System.out.println("Do you want to play again (y/n) ");
 
                 option = input.nextLine();
                 guessCount = 0;
                 magicNum = (int) (Math.random()*100);
             }
-             else if (guessCount == 5){
+            else if (guessCount == 5){
                 System.out.println("no but nice try the number was "+magicNum);
                 System.out.println("Enter Y to play again ");
 
-                 option = input.nextLine();
+                option = input.nextLine();
 
                 guessCount = 0;
                 magicNum = (int) (Math.random()*100);
@@ -62,4 +62,9 @@ public class Main {
         }while (option.equals("Y")) ;
     }
 
+
+    public static void main(String[] args) {
+
+
+    }
 }
