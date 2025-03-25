@@ -1,7 +1,17 @@
 import java.util.Scanner;
 import java.lang.Math;
+
+/** NUmber Guess generates a random number and then gives hints based on the users input for 5 tries
+ * @author Anthony Sieling
+ * @since 3/24/2025
+ */
 public class guess {
-    public static void numberGuess(String[] args) {
+
+
+    /** Sets varaibles then begins a loop that continues a number guessing game until the user wants to stop
+     * @author Anthony Sieling
+     */
+    public static void numberGuess() {
 
 
         Scanner input = new Scanner(System.in);
@@ -59,12 +69,12 @@ public class guess {
             }
 
 
-        }while (option.equals("Y")) ;
+        }while (option.equalsIgnoreCase("y")) ;
     }
 
 
     public static void main(String[] args) {
 
-
+numberGuess();
     }
 }
